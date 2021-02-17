@@ -15,12 +15,15 @@ usage () { echo "
 
 installEssentials() {
     echo "<<== Installing essentials now ==>>"
-
+    sudo apt install curl
     installNode;
     sudo snap install skype --classic
     sudo snap install slack --classic
     sudo snap install discord
     installVSCode;
+    installGo;
+    installMongo;
+    installPostgresql
 }
 
 function installVSCode() {
